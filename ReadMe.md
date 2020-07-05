@@ -3,6 +3,10 @@
 ## 简介
 练手 + 帮女朋友解决pdf转图片的问题
 
+## 依赖
+- [Gin](https://github.com/gin-gonic)
+- [Imagick](https://github.com/gographics/imagick)
+
 ## 注意
 `Imagick`依赖`libmagickwand-dev`
 但不能直接用于pdf处理，需要将`/etc/ImageMagick-6/policy.xml`中的
