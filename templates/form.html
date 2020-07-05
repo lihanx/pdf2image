@@ -1,0 +1,35 @@
+{{ define "uploadForm" }}
+  <form class="container">
+    <!-- 选择文件 -->
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">选择文件</label>
+      <div class="col-sm-10" id="fileWrapper">
+        <input type="file" class="form-control-file" id="file">
+        <div class="invalid-feedback">
+          请选择要转换的pdf文件
+        </div>
+      </div>
+    </div>
+    <!-- 选择下载格式 -->
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">下载格式</label>
+      <div class="col-sm-10">
+        <button type="button" class="btn btn-primary btn-sm" id="zip">ZIP</button>
+        <button type="button" class="btn btn-secondary btn-sm" id="jpg">JPG</button>
+      </div>
+    </div>
+    <!-- 下载链接 -->
+    <div class="form-group row">
+      <label for="url" class="col-sm-2 col-form-label">下载链接</label>
+      <div class="col-sm-10">
+        <input id="url" class="form-control" type="text" placeholder="请通过链接下载转换后的文件" readonly>
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <button type="button" class="btn btn-primary btn-lg" id="submit">开始转换</button>
+      <div class="spinner-border text-primary m-2 spinner" role="status" style="display:none">
+        <span class="sr-only spinner">Loading...</span>
+      </div>
+    </div>
+  </form>
+{{end}}
